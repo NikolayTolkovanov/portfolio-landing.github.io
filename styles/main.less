@@ -7,11 +7,15 @@
 }
 
 html {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
     font-size: 10px;
     scroll-behavior: smooth;
 }
 
 body {
+    overflow-x: hidden;
     height: 100vh;
     width: 100%;
 }
@@ -59,7 +63,7 @@ button {
 }
 
 // Text settings
-h2 {
+.h2() {
     font-size: 5.4rem;
     font-weight: 700;
     color: @text-color_dark;
@@ -129,6 +133,9 @@ h2 {
 .work {
     &-header {
         margin-top: 11rem;
+        h2 {
+            .h2();
+        }
     }
     &-content {
         padding: 9.5rem 0;
@@ -150,15 +157,18 @@ h2 {
 // section portfolio
 
 .portfolio {
-
     &-header {
+        
         margin-top: 20rem;
+        h2 {
+            .h2();
+        }
     }
     &-content {
         padding: 10rem 0;
         &-block {
             p {
-                font-size: 20px;
+                font-size: 2rem;
                 color: @text-color_grey;
                 margin-top: 37px;
             }
@@ -186,8 +196,6 @@ h2 {
             margin-top: 4rem;
             color: #ffffff;
             font-size: 1.8rem;
-            font-weight: 400;
-            
         }
     }
     
@@ -238,9 +246,10 @@ h2 {
             display: block;
             margin-bottom: 3rem;
         }
-        img {
+        a {
             &:not(:last-child) {
                 margin-right: 3rem;
+                 
             }            
         }
     }
@@ -255,6 +264,7 @@ h2 {
         p {
             padding: 3.2rem 0;
             font-size: 1.6rem;
+            margin-bottom: 0;
             color: #ffffff;
         }
     }
@@ -309,7 +319,7 @@ h2 {
             &-block {
                 border: 3px solid @orange;
                 margin-top: 3rem;
-                &-img {
+                img {
                     margin-top: 3rem;
                 }
             }
@@ -331,11 +341,72 @@ h2 {
 
         &-contacts {
             margin-bottom: 4rem;
+            &-block {
+                a {
+                    text-decoration: none;
+                }
+            }
         }
 
         &-social {
             button {
                 margin: auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .main {
+        &-content {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main {
+        &-content {
+            h1 {
+                font-size: 4rem;
+            }
+            .human-img {
+                display: none;  
+            }
+        }
+    }
+    .work {
+        &-header {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+    .portfolio {
+        &-header {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        &-content {
+            &-block {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+    .footer {
+        &-links {
+            text-align: center;
+            a {
+                margin-right: 1rem !important;
             }
         }
     }

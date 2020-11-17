@@ -4,10 +4,14 @@
   padding: 0;
 }
 html {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
   font-size: 10px;
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: hidden;
   height: 100vh;
   width: 100%;
 }
@@ -41,11 +45,6 @@ button:focus {
 .btn-call:hover {
   color: #fff;
   background-color: #f53f4f;
-}
-h2 {
-  font-size: 5.4rem;
-  font-weight: 700;
-  color: #1f1f24;
 }
 .main {
   background-color: #fbfbfb;
@@ -94,6 +93,11 @@ h2 {
 .work-header {
   margin-top: 11rem;
 }
+.work-header h2 {
+  font-size: 5.4rem;
+  font-weight: 700;
+  color: #1f1f24;
+}
 .work-content {
   padding: 9.5rem 0;
 }
@@ -105,11 +109,16 @@ h2 {
 .portfolio-header {
   margin-top: 20rem;
 }
+.portfolio-header h2 {
+  font-size: 5.4rem;
+  font-weight: 700;
+  color: #1f1f24;
+}
 .portfolio-content {
   padding: 10rem 0;
 }
 .portfolio-content-block p {
-  font-size: 20px;
+  font-size: 2rem;
   color: #8993ad;
   margin-top: 37px;
 }
@@ -129,7 +138,6 @@ h2 {
   margin-top: 4rem;
   color: #ffffff;
   font-size: 1.8rem;
-  font-weight: 400;
 }
 .footer {
   margin-top: 7.7rem;
@@ -162,7 +170,7 @@ h2 {
   display: block;
   margin-bottom: 3rem;
 }
-.footer-social img:not(:last-child) {
+.footer-social a:not(:last-child) {
   margin-right: 3rem;
 }
 .footer-links,
@@ -176,6 +184,7 @@ h2 {
 .footer-copyright p {
   padding: 3.2rem 0;
   font-size: 1.6rem;
+  margin-bottom: 0;
   color: #ffffff;
 }
 @media (max-width: 991px) {
@@ -202,7 +211,7 @@ h2 {
     border: 3px solid #ff4e2e;
     margin-top: 3rem;
   }
-  .portfolio-content-block-img {
+  .portfolio-content-block img {
     margin-top: 3rem;
   }
   .footer {
@@ -217,7 +226,38 @@ h2 {
   .footer-contacts {
     margin-bottom: 4rem;
   }
+  .footer-contacts-block a {
+    text-decoration: none;
+  }
   .footer-social button {
     margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .main-content img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .main-content h1 {
+    font-size: 4rem;
+  }
+  .main-content .human-img {
+    display: none;
+  }
+  .work-header h2 {
+    font-size: 3rem;
+  }
+  .portfolio-header h2 {
+    font-size: 3rem;
+  }
+  .portfolio-content-block img {
+    width: 90%;
+  }
+  .footer-links {
+    text-align: center;
+  }
+  .footer-links a {
+    margin-right: 1rem !important;
   }
 }
